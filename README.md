@@ -20,7 +20,7 @@ pip install -r requirements.txt
 Start the streamlit app
 
 ```python
-python -m streamlit run youtube_shorts_downloader/app.py
+python -m streamlit run youtube_shorts_transcript_downloader/app.py
 ```
 
 You can now drag and drop `.txt` files containing Youtube Shorts urls - one url per line - into the app for batch transcript fetching.
