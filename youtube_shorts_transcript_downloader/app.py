@@ -1,9 +1,6 @@
 import streamlit as st
-import io
 import pandas as pd
-from youtube_shorts_downloader import main_dir
-from youtube_shorts_downloader.transcripts import get_batch_transcripts
-from youtube_shorts_downloader.input_output import parse_input_file, save_output
+from youtube_shorts_transcript_downloader.transcripts import get_batch_transcripts
 
 
 st.title("YT Shorts Transcript Downloader")
