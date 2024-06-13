@@ -1,2 +1,3 @@
+pandas
 youtube-transcript-api
 streamlit
