@@ -1,4 +1,4 @@
-<a href="https://colab.research.google.com/github/jermwatt/youtube_transcript_downloader/blob/main/transcript_downloader_walkthrough.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>
+[![HuggingFace Space](https://img.shields.io/badge/🤗-HuggingFace%20Space-cyan.svg)](https://huggingface.co/spaces/neonwatty/youtube_shorts_transcript_downloader)  [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/jermwatt/youtube_transcript_downloader/blob/main/transcript_downloader_walkthrough.ipynb)
 
 # Youtube Shorts Transcripts downloader
 
@@ -17,10 +17,12 @@ pip install -r requirements.txt
 
 ## Instructions for using the streamlit app
 
-Start the streamlit app
+Use in browser directly by clicking here [![HuggingFace Space](https://img.shields.io/badge/🤗-HuggingFace%20Space-cyan.svg)](https://huggingface.co/spaces/neonwatty/youtube_shorts_transcript_downloader).
+
+Start the streamlit app up locally
 
 ```python
 python -m streamlit run youtube_shorts_transcript_downloader/app.py
 ```
 
-You can now drag and drop `.txt` files containing Youtube Shorts urls - one url per line - into the app for batch transcript fetching.
+In either case you can now drag and drop `.txt` files containing Youtube Shorts urls - one url per line - into the app for batch transcript fetching.
