@@ -3,9 +3,11 @@ from typing import List, Dict
 from youtube_transcript_api import YouTubeTranscriptApi
 
 
-def is_valid_youtube_shorts_url(potential_url: str) -> bool:
-    pattern = r"^https://www\.youtube\.com/shorts/[A-Za-z0-9_-]{11}$"  # youtube vido ids are always 11 chars long
-    return re.match(pattern, potential_url) is not None
+def is_valid_youtube_shorts_url(url: str) -> bool:
+    if not isinstance(url, str):
+        return False 
+    pattern = r'^https://www\.youtube\.com/shorts/[A-Za-z0-9_-]{11}$'  # youtube vido ids are always 11 chars long
+    return re.match(pattern, url) is not None
 
 
 def get_single_transcript(youtube_url: str) -> dict:
