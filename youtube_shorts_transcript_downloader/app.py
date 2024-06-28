@@ -41,6 +41,7 @@ def button_logic(youtube_short_urls: list) -> None:
     if trans_button_val:
         batch_transcripts = get_batch_transcripts(youtube_short_urls)
         df = pd.DataFrame(batch_transcripts)
+        # st.dataframe(df)
         converted_dv = convert_df(df)
 
         with download_area:
@@ -58,9 +59,11 @@ def button_logic(youtube_short_urls: list) -> None:
 youtube_short_urls = []
 if uploaded_file is not None:
     if text_urls is not None:
-        st.warning("you can enter urls manually or from file but not both", icon="⚠️")
-        st.stop()
+        if len(text_urls.strip()) > 0:
+            st.warning("you can enter urls manually or from file but not both", icon="⚠️")
+            st.stop()
     
+    print('INFO: A')
     if uploaded_file.type == "text/plain":
         from io import StringIO
 
@@ -71,9 +74,10 @@ if uploaded_file is not None:
     #     youtube_short_urls = parse_input_file(default_file_path)
 
 if text_urls is not None:
-    if uploaded_file is not None:
-        st.warning("you can enter urls manually or from file but not both", icon="⚠️")
-        st.stop()
+    if len(text_urls.strip()) > 0:
+        if uploaded_file is not None:
+            st.warning("you can enter urls manually or from file but not both", icon="⚠️")
+            st.stop()
         
     try:
         text_urls_split = text_urls.split(",")
@@ -84,4 +88,5 @@ if text_urls is not None:
         st.stop()
     
     with st.spinner(text="transcript pull in progress..."):
+        print(f"youtube_short_urls --> {youtube_short_urls}")
         button_logic(youtube_short_urls)

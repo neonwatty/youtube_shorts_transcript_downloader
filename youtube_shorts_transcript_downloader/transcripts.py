@@ -42,6 +42,9 @@ def get_batch_transcripts(youtube_urls: List[str]) -> List[Dict]:
         video_transcripts = YouTubeTranscriptApi.get_transcripts(
             valid_vids, languages=["en"]
         )[0]
+        for v in video_transcripts:
+            print(v)
+            
         entries = []
         for i in range(len(valid_urls)):
             entry = {}
