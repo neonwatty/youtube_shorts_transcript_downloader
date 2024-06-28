@@ -41,8 +41,8 @@ def button_logic(youtube_short_urls: list) -> None:
     if trans_button_val:
         batch_transcripts = get_batch_transcripts(youtube_short_urls)
         df = pd.DataFrame(batch_transcripts)
-        # st.dataframe(df)
         converted_dv = convert_df(df)
+        st.write(df.head(1).to_dict())
 
         with download_area:
             st.download_button(
@@ -63,13 +63,13 @@ if uploaded_file is not None:
             st.warning("you can enter urls manually or from file but not both", icon="⚠️")
             st.stop()
     
-    print('INFO: A')
     if uploaded_file.type == "text/plain":
         from io import StringIO
-
+        
         stringio = StringIO(uploaded_file.read().decode("utf-8"))
         for line in stringio:
             youtube_short_urls.append(line.strip())
+
     # else:
     #     youtube_short_urls = parse_input_file(default_file_path)
 
@@ -79,14 +79,13 @@ if text_urls is not None:
             st.warning("you can enter urls manually or from file but not both", icon="⚠️")
             st.stop()
         
-    try:
-        text_urls_split = text_urls.split(",")
-        text_urls_split = [v.strip() for v in text_urls_split]
-        youtube_short_urls = text_urls_split
-    except:
-        st.warning("please check your manually entered urls", icon="⚠️") 
-        st.stop()
+        try:
+            text_urls_split = text_urls.split(",")
+            text_urls_split = [v.strip() for v in text_urls_split]
+            youtube_short_urls = text_urls_split
+        except:
+            st.warning("please check your manually entered urls", icon="⚠️") 
+            st.stop()
     
     with st.spinner(text="transcript pull in progress..."):
-        print(f"youtube_short_urls --> {youtube_short_urls}")
         button_logic(youtube_short_urls)
