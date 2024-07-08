@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 from youtube_shorts_transcript_downloader.transcripts import get_batch_transcripts
 
-st.set_page_config(page_title="YT Shorts Transcript Downloader", layout="wide")
+st.set_page_config(page_title="Youtube Shorts Transcript Downloader", layout="wide")
 st.title("YT Shorts Transcript Downloader")
 st.markdown(
     "instructions: enter in urls separated by commas or upload a text file with one url per line"
