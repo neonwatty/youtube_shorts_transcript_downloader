@@ -5,15 +5,15 @@
 
 
 
-# Youtube Shorts Transcripts downloader
+# Youtube / Shorts Transcripts downloader
 
-Download transcripts for Youtube Shorts by dragging and dropping a text file containing valid Youtube Shorts urls into a simple streamlit app.
+Download transcripts for Youtube / Shorts by dragging and dropping a text file containing valid Youtube / Shorts urls into a simple streamlit app.
 
 This repo illustrates also illustrates how to pull transcripts step-by-step in the `transcript_downloader_walkthrough.ipynb` notebook.
 
 ## Install instructions
 
-To get setup to run the notebook / bleep your own videos / run the strealit demo first install the requirements for this project by pasting the below in your terminal.
+To get setup to run the notebook and strealit demo first install the requirements for this project by pasting the below in your terminal.
 
 ```python
 pip install -r requirements.txt
