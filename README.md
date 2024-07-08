@@ -1,4 +1,9 @@
 [![HuggingFace Space](https://img.shields.io/badge/🤗-HuggingFace%20Space-cyan.svg)](https://huggingface.co/spaces/neonwatty/youtube_shorts_transcript_downloader)  [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/jermwatt/youtube_transcript_downloader/blob/main/transcript_downloader_walkthrough.ipynb)
+<a href="https://www.youtube.com/watch?v=Z7Zm3GQ8q-U" target="_parent"><img src="https://badges.aleen42.com/src/youtube.svg" alt="Youtube"/></a>
+
+
+
+
 
 # Youtube Shorts Transcripts downloader
 
