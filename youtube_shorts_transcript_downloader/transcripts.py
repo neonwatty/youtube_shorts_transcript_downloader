@@ -3,16 +3,18 @@ from typing import List, Dict
 from youtube_transcript_api import YouTubeTranscriptApi
 
 
-def is_valid_youtube_shorts_url(url: str) -> bool:
+def is_valid_youtube_url(url: str) -> bool:
     if not isinstance(url, str):
-        return False 
-    pattern = r'^https://www\.youtube\.com/shorts/[A-Za-z0-9_-]{11}$'  # youtube vido ids are always 11 chars long
+        return False
+    pattern = r"^https://www\.youtube\.com/watch\?v=[A-Za-z0-9_-]{11}$"  # youtube vido ids are always 11 chars long
+    if "shorts" in url:
+        pattern = r"^https://www\.youtube\.com/shorts/[A-Za-z0-9_-]{11}$"  # youtube vido ids are always 11 chars long
     return re.match(pattern, url) is not None
 
 
 def get_single_transcript(youtube_url: str) -> dict:
     try:
-        if is_valid_youtube_shorts_url(youtube_url):
+        if is_valid_youtube_url(youtube_url):
             video_id = youtube_url.split("/")[-1]
             video_transcript = YouTubeTranscriptApi.get_transcript(video_id)
             entry = {}
@@ -34,7 +36,7 @@ def get_batch_transcripts(youtube_urls: List[str]) -> List[Dict]:
     valid_urls = []
     valid_vids = []
     for i, url in enumerate(youtube_urls):
-        if is_valid_youtube_shorts_url(url):
+        if is_valid_youtube_url(url):
             vid = url.split("/")[-1]
             valid_urls.append(url)
             valid_vids.append(vid)
