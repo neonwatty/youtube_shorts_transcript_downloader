@@ -11,7 +11,7 @@ Download transcripts for Youtube Shorts by dragging and dropping a text file con
 
 <img align="center" src="https://github.com/jermwatt/readme_gifs/blob/main/yt_shorts_demo.gif" height="325">
 
-This repo illustrates also illustrates how to pull transcripts step-by-step in the `transcript_downloader_walkthrough.ipynb` notebook.
+This repo also illustrates how to pull transcripts step-by-step in the `transcript_downloader_walkthrough.ipynb` notebook.
 
 ## Install instructions
 
