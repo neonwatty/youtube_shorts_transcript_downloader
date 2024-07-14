@@ -7,7 +7,7 @@
 
 # Youtube Shorts Transcripts downloader
 
-Download transcripts for Youtube Shorts by dragging and dropping a text file containing valid Youtube Shorts urls into a simple streamlit app.
+Download transcripts for Youtube Shorts by dragging and dropping a text file containing valid Youtube Shorts urls into a simple streamlit app (shown below).
 
 <img align="center" src="https://github.com/jermwatt/readme_gifs/blob/main/yt_shorts_demo.gif" height="325">
 
