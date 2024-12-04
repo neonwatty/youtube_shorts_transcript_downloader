@@ -2,10 +2,9 @@
 <a href="https://www.youtube.com/watch?v=Z7Zm3GQ8q-U" target="_parent"><img src="https://badges.aleen42.com/src/youtube.svg" alt="Youtube"/></a> [![Python application](https://github.com/neonwatty/youtube_shorts_transcript_downloader/actions/workflows/python-app.yml/badge.svg)](https://github.com/neonwatty/youtube_shorts_transcript_downloader/actions/workflows/python-app.yml/python-app.yml)
 
 
+# A simple app for downloading YouTube Shorts transcripts
 
-
-
-# Youtube Shorts Transcripts downloader
+Built with Python, Streamlit, and Docker.  Easily self-hostable.
 
 Download transcripts for Youtube Shorts by dragging and dropping a text file containing valid Youtube Shorts urls into a simple streamlit app (shown below).
 
