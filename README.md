@@ -4,7 +4,7 @@
 
 # A simple app for downloading YouTube Shorts transcripts
 
-Built with Python, Streamlit, and Docker.  Easily self-hostable.
+Built with Python and Streamlit.  Easily self-host.
 
 Download transcripts for Youtube Shorts by dragging and dropping a text file containing valid Youtube Shorts urls into a simple streamlit app (shown below).
 
